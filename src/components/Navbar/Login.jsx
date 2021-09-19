@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom"
 import axios from "axios"
+import { connect } from 'react-redux'
 
-export default class Login extends Component {
+ class Login extends Component {
 
     state={
         apiMessage:""
@@ -28,6 +29,7 @@ export default class Login extends Component {
             {
                 localStorage.setItem("token",data.token);
                 this.props.history.replace("/Home");
+                this.props.token()
             }
       
         else
@@ -63,3 +65,14 @@ export default class Login extends Component {
         )
         }
 }
+
+
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        token:()=>dispatch({type:'WITHTOKEN'})
+    }
+}
+
+
+
+export default connect(null, mapDispatchToProps)(Login)

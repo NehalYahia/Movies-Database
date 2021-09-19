@@ -8,6 +8,8 @@ import Tv from './components/TV/Tv'
 import Notfound from './components/Notfound/Notfound'
 import Register from './components/Navbar/Register'
 import Login from './components/Navbar/Login'
+import Logout from './components/Navbar/Logout'
+
 import Protected from './components/protection/Protected'
 
 export default class App extends Component {
@@ -20,6 +22,7 @@ export default class App extends Component {
            <Protected path="/Movies" component={Movies}/>
            <Protected path="/Tv" component={Tv}/>
            <Route path="/Login" component={Login}/>
+           <Route path="/Logout" component={Logout}/>
            <Route path="/Register" component={Register}/>
            <Redirect exact from="/" to="/Login"/>
            <Route path="*" component={Notfound}/>

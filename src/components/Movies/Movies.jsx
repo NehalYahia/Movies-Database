@@ -41,7 +41,7 @@ export default class Movies extends Component {
                                     <div className="modal fade " id={value.origin_country+value.id} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div className="modal-dialog modal-xl ">
                                             <div className="modal-content">
-                                                <div className="d-flex justify-content-center second_background">
+                                                <div className="d-flex justify-content-center">
                                                     <div className="w-25">
                                                         <img src={"https://image.tmdb.org/t/p/original"+ value.poster_path} class="d-block w-100 h-100" alt="..."/>
                                                     </div>
